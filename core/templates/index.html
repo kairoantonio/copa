@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Principal{% endblock titulo %}
+
+{% block conteudo %}
+
+<form class="form-horizontal" id="form_copa" name="form_copa" action="/copa/salvar/" method="POST" role="form">{% csrf_token %}
+  
+  <label for="gols1" >Brasil </label>
+  <input type="text" class="input-small" id="gols1" value="{{ jogo.gols1 }}"/> X
+  <input type="text" class="input-small"  id="gols2" value="{{ jogo.gols2 }}"/>
+  <label for="gols2" >Croacia </label>
+  
+  <br />
+  
+  <label for="gols3"  for="gols1" >Brasil </label>
+  <input type="text" class="input-small"  id="gols3" value="{{ jogo.gols3 }}"/> X
+  <input type="text" class="input-small"  id="gols4" value="{{ jogo.gols4 }}"/>
+  <label for="gols4" >Mexico </label>
+  
+  <br />
+  <label for="gols5" >Brasil </label>
+  <input type="text" class="input-small"  id="gols5" value="{{ jogo.gols5 }}"/> X
+  <input type="text" class="input-small"  id="gols6" value="{{ jogo.gols6 }}"/>
+  <label for="gols6" >Camaroes </label>
+  
+  <br />
+  <button type="submit" class="btn btn-success">Salvar Registro</button>
+  
+  
+</form>
+
+
+{%endblock conteudo %}
